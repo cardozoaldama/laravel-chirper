@@ -32,7 +32,7 @@
 
     <footer class="footer footer-center p-5 bg-base-300 text-base-content text-xs">
         <div>
-            <p>&copy; 2026 Chirper - Built with Laravel and &hearts;</p>
+            <p>&copy; {{ date('Y') }} Chirper - Built with Laravel and &hearts;</p>
         </div>
     </footer>
 </body>
