@@ -6,8 +6,12 @@ use App\Http\Controllers\Auth\Register;
 
 Route::get('/', [ChirpController::class, 'index']);
 
-Route::resource('chirps', ChirpController::class)
-    ->only(['store', 'edit', 'update', 'destroy']);
+Route::middleware('auth')->group(
+    fn() =>
+    Route::resource('chirps', ChirpController::class)
+        ->only(['store', 'edit', 'update', 'destroy'])
+);
+
 
 // Registration routes
 Route::view('/register', 'auth.register')
