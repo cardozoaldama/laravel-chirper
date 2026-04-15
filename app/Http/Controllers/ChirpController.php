@@ -42,7 +42,7 @@ class ChirpController extends Controller
         ]);
 
         // Redirect back to the feed
-        return redirect('/home')->with('success', 'Chirp created!');
+        return redirect('/')->with('success', 'Chirp created!');
     }
 
     /**
